@@ -1,0 +1,73 @@
+### Online Library System — API Test Requests
+### Requires the "REST Client" VS Code extension (humao.rest-client)
+### Click "Send Request" above any block below once your backend is running.
+
+@baseUrl = http://localhost:5000/api
+@token = PASTE_TOKEN_HERE_AFTER_LOGIN
+
+### Health check
+GET {{baseUrl}}/health
+
+### Register a new member
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+### Log in as seeded admin
+# Copy the "token" from the response and paste it into @token above
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@library.com",
+  "password": "admin123"
+}
+
+### Get my profile (requires token)
+GET {{baseUrl}}/auth/me
+Authorization: Bearer {{token}}
+
+### List all books
+GET {{baseUrl}}/books
+
+### Search books
+GET {{baseUrl}}/books?search=clean&genre=Technology
+
+### Get one book by ID (replace with a real ID from the list above)
+GET {{baseUrl}}/books/PASTE_BOOK_ID_HERE
+
+### Create a book (admin only)
+POST {{baseUrl}}/books
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "title": "The Hobbit",
+  "author": "J.R.R. Tolkien",
+  "isbn": "9780547928227",
+  "genre": "Fiction",
+  "description": "A hobbit's unexpected journey.",
+  "totalCopies": 3,
+  "publishedYear": 1937
+}
+
+### Borrow a book (replace with a real book ID)
+POST {{baseUrl}}/borrow/PASTE_BOOK_ID_HERE
+Authorization: Bearer {{token}}
+
+### My borrow history
+GET {{baseUrl}}/borrow/my
+Authorization: Bearer {{token}}
+
+### Return a book (replace with a real borrow record ID)
+PUT {{baseUrl}}/borrow/PASTE_BORROW_ID_HERE/return
+Authorization: Bearer {{token}}
+
+### All borrow records (admin only)
+GET {{baseUrl}}/borrow
+Authorization: Bearer {{token}}
