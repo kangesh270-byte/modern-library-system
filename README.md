@@ -1,51 +1,42 @@
 # 📚 Modern Library System
 
-A modern library management system designed to streamline book management, user authentication, and borrowing operations through an intuitive and efficient interface.
-
----
+A modern web-based library management system that simplifies book management, user authentication, and borrowing operations through an intuitive interface.
 
 ## 🚀 Features
 
 * 🔐 User Authentication & Authorization
-* 👥 Admin and Member Roles
-* 📖 Book Management
+* 👥 Admin & Member Roles
+* 📖 Book Management System
 * 🔄 Book Borrowing & Return Tracking
-* 🛡️ Secure JWT Authentication
+* 🛡️ JWT-Based Secure Authentication
 * 🗄️ MongoDB Database Integration
 * 📱 Responsive User Interface
 * ⚡ RESTful API Architecture
 
----
+## 🛠️ Tech Stack
+
+* **Frontend:** React.js, Vite
+* **Backend:** Node.js, Express.js
+* **Database:** MongoDB
+* **Authentication:** JWT
 
 ## 📂 Project Structure
 
-```bash
+```text
 modern-library-system/
-│
 ├── backend/
-│   ├── src/
-│   ├── config/
-│   └── package.json
-│
 ├── frontend/
-│   ├── src/
-│   └── package.json
-│
 └── README.md
 ```
 
----
-
 ## ⚙️ Installation
-
-### Clone the Repository
 
 ```bash
 git clone https://github.com/kangesh270-byte/modern-library-system.git
 cd modern-library-system
 ```
 
-### Backend Setup
+### Backend
 
 ```bash
 cd backend
@@ -53,7 +44,7 @@ npm install
 npm run dev
 ```
 
-### Frontend Setup
+### Frontend
 
 ```bash
 cd frontend
@@ -61,11 +52,9 @@ npm install
 npm run dev
 ```
 
----
-
 ## 🔑 Environment Variables
 
-Create a `.env` file inside the `backend` directory:
+Create a `.env` file inside the `backend` folder:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
@@ -74,52 +63,29 @@ JWT_SECRET=your_secret_key
 CLIENT_URL=http://localhost:5173
 ```
 
----
-
 ## 👤 Default Credentials
 
-### Admin Account
+**Admin**
 
-```text
-Email: admin@library.com
-Password: admin123
-```
+* Email: [admin@library.com](mailto:admin@library.com)
+* Password: admin123
 
-### Member Account
+**Member**
 
-```text
-Email: member@library.com
-Password: member123
-```
-
----
-
-## 🛠️ Tech Stack
-
-* Frontend
-* Backend
-* MongoDB
-* JWT Authentication
-
----
+* Email: [member@library.com](mailto:member@library.com)
+* Password: member123
 
 ## 🎯 Future Enhancements
 
 * 📧 Email Verification
-* 💰 Fine Management System
-* 📚 Book Reservation System
+* 💰 Fine Management
+* 📚 Book Reservation
 * 🔳 QR Code Integration
 * 📊 Analytics Dashboard
-* 🔔 Notification System
-
----
+* 🔔 Notifications
 
 ## 📜 License
 
 This project is developed for educational and learning purposes.
 
----
-
-### ⭐ Support
-
-If you find this project useful, consider giving it a **star** on GitHub.
+⭐ If you find this project useful, please consider giving it a star on GitHub.
