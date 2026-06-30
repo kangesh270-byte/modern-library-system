@@ -2,7 +2,7 @@
 
 A modern web-based library management system that simplifies book management, user authentication, and borrowing operations through an intuitive interface.
 
-## 🚀 Features
+## 🚀 Features  
 
 * 🔐 User Authentication & Authorization
 * 👥 Admin & Member Roles
